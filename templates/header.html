@@ -1,0 +1,51 @@
+{% load static %}
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark h-100">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'imgs/logo/logo_removebg.png' %}" class="logo  h-auto w-25" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="login-nav login-nav-md login-nav-lg">
+            <a href="/html/login.html">Đăng Nhập</a>|<a href="/html/login.html?register=true">Đăng Ký</a>
+        </div>
+        <div class="collapse navbar-collapse border-top border-1 mt-4 pt-3" id="navbarNav">
+            <ul class="navbar-nav nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">TRANG CHỦ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/newsCarDetail.html?brand=toyota">MẪU XE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product">Ô TÔ CŨ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/contact.html">LIÊN HỆ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/sitemap.html">SITEMAP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/about.html">VỀ CHÚNG TÔI</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="lni lni-key"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>

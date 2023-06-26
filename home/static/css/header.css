@@ -1,0 +1,47 @@
+header{
+    width: 100vw;
+    height: 110px;
+    top: 0;
+    position:fixed;
+    z-index: 999;
+    color: rgba(255, 255, 255, 0.595);
+    background-color: rgba(0, 0, 0, 0.7); /* Thiết lập màu nền với giá trị alpha = 0.5 */
+    backdrop-filter: blur(10px); /* Thiết lập hiệu ứng mờ nền */
+    -webkit-backdrop-filter: blur(10px); /* Thiết lập hiệu ứng mờ nền cho trình duyệt Safari */
+}
+
+header nav ul li {
+    margin-right: 20px; /* Khoảng cách ngang giữa các nav-item */
+}
+
+header .login-nav {
+    position: absolute;
+    top: 8%;
+    left: 25%;
+}
+
+header .login-nav a {
+    color: rgba(255, 255, 255, 0.595);
+    margin: 5px;
+}
+
+header .login-nav a:hover {
+    color: #fff;
+}
+
+header .navbar .navbar-brand {
+    width: 35%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .login-nav-md {
+        left: 40% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .login-nav-lg {
+        left: unset !important;
+      right: 10% !important;
+    }
+  }

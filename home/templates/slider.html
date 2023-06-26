@@ -1,0 +1,48 @@
+<swiper-container class="sliderSwiper" direction="vertical">
+    <swiper-slide>
+        <img class="swiper-img" src="../static/imgs/slider/brandtile-electrified-d.jpg" alt="First slide">
+        <div class="swiper-captions">
+            <span>ĐỊNH HÌNH BỞI HIỆU SUẤT</span>
+            <p>Tinh thần nguyên bản, năng lượng đột phá, mang trong mình động cơ V4 Twin-turbo đi cùng với hệ dẫn động AWD, sẽ đưa bạn đến với những trải nghiệm chưa từng có</p>
+            <a href="/">
+                <button type="button" class="btn btn-outline-light" style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem;">Khám phá ngay</button>
+            </a>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <img class="swiper-img" src="../static/imgs/slider/rx-500h-fsport-performance-homepage-tile-d.jpg" alt="Second slide">
+        <div class="swiper-captions">
+            <span>SỨC MẠNH KHÔNG GIỚI HẠN</span>
+            <p>Hệ thống điện hybrid tăng áp của RX kết hợp với hệ dẫn động bốn bánh sẽ tiếp thêm lực và làm gia tăng độ trực quan, từ đó mang đến sự phấn khích của sức mạnh không giới hạn.</p>
+            <button type="button" class="btn btn-outline-light" style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem;">Khám phá ngay</button>
+        </div>
+    </swiper-slide>
+</swiper-container>
+
+<script>
+    var swiper = new Swiper('.sliderSwiper', {
+        slidesPerView: 1,
+        speed: 3000,
+        {% comment %} loop: true,
+        autoplay: {
+            delay: 5000, // Thời gian chờ giữa các slide (ms)
+            disableOnInteraction: false // Vô hiệu hóa tự động chuyển slide khi người dùng tương tác
+        }, {% endcomment %}
+        effect: 'fade', // Hiệu ứng fade
+        fadeEffect: {
+        crossFade: true, // Cho phép hiệu ứng cross-fade (nhập nhằng) giữa các slide
+        },
+
+        breakpoints: {
+            480: {},
+            640: {
+                slidesPerView: 1,
+                direction: 'vertical',
+            },
+            768: {
+                slidesPerView: 1,
+                direction: 'vertical', // Chuyển về chế độ chuyển slide ngang khi ở màn hình md
+            }
+          },
+    });
+</script>

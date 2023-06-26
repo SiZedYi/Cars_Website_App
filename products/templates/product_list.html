@@ -1,0 +1,34 @@
+{% load l10n %}
+
+{% for product in product_list %}
+
+<div class= "product-item">
+    <img src={{ product.imgs.0 }} alt="{{product.name}}">
+    <div class="product-item-content container">
+        <h6 class="product-item-title">{{product.car_model}} - {{product.name}}</h6>
+
+        {% localize on %}
+        <p class="product-item-price">{{ product.price }} VND</p>
+        {% endlocalize %}
+
+        <div class="row">
+            <div class="row">
+                <div class="col-6">
+                    <span>{{product.car_model}}</span>
+                </div>
+                <div class="col-6">
+                    <span>{{product.gear_box}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <span>{{product.odo}}</span>
+                </div>
+                <div class="col-6">
+                    <span>{{product.fuel}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

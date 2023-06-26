@@ -1,0 +1,30 @@
+<swiper-container class="brandSwiper brand-container" free-mode="true">
+    {% for item in brand_filter %}
+    <swiper-slide class="brand-item">
+        <a href="/product/{{item.name|lower}}">
+            <img src={{item.logo}} alt="brand-{{item.id}}">
+            <p>{{item.name| capfirst }}</p>
+        </a>
+    </swiper-slide>
+    {% endfor %}
+</swiper-container>
+
+<!-- Initialize Swiper -->
+<script>
+    //initialize swiper when document ready
+    var swiper = new Swiper ('.brandSwiper', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      breakpoints: {
+        480: {
+          slidesPerView: 4,
+        },
+        640: {
+          slidesPerView: 6.5,
+        }
+      },
+      // Optional parameters
+
+
+    })
+  </script>

@@ -1,0 +1,180 @@
+<div class="container spotlight">
+    <h4>MẪU XE NỔI BẬT</h4>
+    <nav>
+        <div class="nav nav-tabs spotlight-choice" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link spotlight-header active" id="nav-suv-tab"
+            data-toggle="tab" href="#nav-suv" role="tab" aria-controls="nav-suv" aria-selected="true"
+            >SUV</a>
+            <a class="nav-item nav-link spotlight-header" id="nav-sedan-tab" data-toggle="tab" href="#nav-sedan" role="tab" aria-controls="nav-sedan" aria-selected="false"
+            >SEDAN</a>
+            <a class="nav-item nav-link spotlight-header" id="nav-mpv-tab" data-toggle="tab" href="#nav-mpv" role="tab" aria-controls="nav-mpv" aria-selected="false"
+            >MPV</a>
+            <a class="nav-item nav-link spotlight-header" id="nav-cuv-tab" data-toggle="tab" href="#nav-cuv" role="tab" aria-controls="nav-cuv" aria-selected="false"
+            >CUV</a>
+            <a class="nav-item nav-link spotlight-header" id="nav-pickup-tab" data-toggle="tab" href="#nav-pickup" role="tab" aria-controls="nav-pickup" aria-selected="false"
+            >PICK-UP</a>
+            <a class="nav-item nav-link spotlight-header" id="nav-hatchback-tab" data-toggle="tab" href="#nav-hatchback" role="tab" aria-controls="nav-hatchback" aria-selected="false"
+            >HATCHBACK</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-suv" role="tabpanel"
+        aria-labelledby="nav-suv-tab">
+            <div class="spotlight-container">
+                {% for item in suv %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="/suv/">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+        <div class="tab-pane fade" id="nav-sedan" role="tabpanel" aria-labelledby="nav-sedan-tab">
+            <div class="spotlight-container">
+                {% for item in sedan %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="?/sedan/">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+        <div class="tab-pane fade" id="nav-mpv" role="tabpanel" aria-labelledby="nav-mpv-tab">
+            <div class="spotlight-container">
+                {% for item in mpv %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="?brand=honda">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+        <div class="tab-pane fade" id="nav-cuv" role="tabpanel" aria-labelledby="nav-cuv-tab">
+            <div class="spotlight-container">
+                {% for item in cuv %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="?brand=honda">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+        <div class="tab-pane fade" id="nav-pickup" role="tabpanel" aria-labelledby="nav-pickup-tab">
+            <div class="spotlight-container">
+                {% for item in pickup %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="?brand=honda">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+        <div class="tab-pane fade" id="nav-hatchback" role="tabpanel" aria-labelledby="nav-hatchback-tab">
+            <div class="spotlight-container">
+                {% for item in hatchback %}
+                <div class="spotlight-item" style="animation: flyIn {{ item.animation_time }}s;">
+                    <a href='{{item.name}}'
+                        class="item col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div  style="height:130px">
+                            <img src={{item.img}} alt="item-{{item.id}}">
+                        </div>
+                        <div class="item-info">
+                            <h4 class="name">{{ item.brand.name }}</h4>
+                            <span>{{item.name}}</span>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="?brand=honda">
+                <button type="button" class="btn btn-secondary"
+                    style="--bs-btn-border-radius: 0; --bs-btn-padding-y: .5rem; margin-top: 1rem;
+                    --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem; margin-top:18rem">
+                    XEM THÊM
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    $('#nav-tab a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>

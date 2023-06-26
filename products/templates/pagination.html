@@ -1,0 +1,73 @@
+<style>
+  .page-link {
+    color: black;
+    border-radius: 20px;
+  }
+
+  .page-item {
+    margin: 0 3px;
+  }
+
+  .page-link:hover {
+    color: #000;
+  }
+
+  .page-item.active .page-link {
+    background-color: #333;
+}
+</style>
+
+<div class="pagination w-100 justify-content-center mt-3">
+    {% comment %} <span class="step-links"> {% endcomment %}
+
+        <li class="page-item" id="previous-page">
+            <a class="page-link" href="?page=1">First</a>
+        </li>
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo; </a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">&laquo; </a>
+          </li>
+        {% endif %}
+        {% for page_number in page_obj.paginator.page_range %}
+          <li class="page-item">
+              <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+          </li>
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}"> &raquo;</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link"> &raquo;</a>
+          </li>
+        {% endif %}
+          <li class="page-item" id="next-page">
+              <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+          </li>
+    {% comment %} </span> {% endcomment %}
+</div>
+
+<script>
+    $(document).ready(function() {
+        var currentPage = {{ page_obj.number }};
+        var totalPages = {{ page_obj.paginator.num_pages }};
+
+        // Hàm để hiển thị trạng thái phân trang
+        function renderPagination() {
+          // Cập nhật trạng thái phần tử active
+          $('.page-item').removeClass('active');
+          $('.page-item:eq(' + (currentPage +1) + ')').addClass('active');
+          console.log(currentPage)
+        }
+
+        // Hiển thị trạng thái phân trang ban đầu
+        renderPagination();
+      });
+
+</script>

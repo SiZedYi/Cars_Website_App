@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Sản phẩm</title>
+{% endblock title %}
+
+{% block products %}
+<div class="container top-container text-center">
+    {% include 'brands.html' %}
+    {% include 'filter.html' %}
+</div>
+{% endblock products %}

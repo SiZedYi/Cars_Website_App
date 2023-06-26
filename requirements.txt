@@ -1,0 +1,4 @@
+django
+psycopg2==2.9.6
+django-bootstrap-v5
+Babel

@@ -1,0 +1,54 @@
+
+<!-- Search -->
+<form action="{{ request.path }}" method="get" id="search-box">
+    <input type="text" name="searchProduct" id="search-input"
+    placeholder="Tìm kiếm mẫu xe của bạn"  value="{{ request.GET.searchProduct }}">
+    <button type="submit" class="search-submit">
+        <i class="lni lni-search"></i>
+    </button>
+
+
+<!-- Products List  -->
+<div class="row mt-5">
+    <aside class="col-12 col-md-3">
+        <div class="filter-box">
+            <p class="dark"><a href="#">XE CŨ</a></p>
+            <p class="dropdown-brand">
+                <a href="/">XE MỚI</a>
+            </p>
+        </div>
+        <div class="filter-box">
+            <p class="filter-box-title">Năm sản xuất</p>
+            <p class="filter-box-content">
+            <input type="radio" name="year" id="1900" value="1">
+            <label for="1900">1900-2000</label><br>
+            <input type="radio" name="year" id="2001" value="2">
+            <label for="2001">2001-2010</label><br>
+            <input type="radio" name="year" id="2011" value="3">
+            <label for="2011">2011-2020</label><br>
+            <input type="radio" name="year" id="2021" value="4">
+            <label for="2021">2021-nay</label><br>
+            </p>
+        </div>
+        <div class="filter-box">
+            <p class="filter-box-title">Mức giá (đồng)</p>
+            <p class="filter-box-content">
+            <input type="radio" name="price" id="100mil" value="1">
+            <label for="100mil">100 - 300 triệu</label><br>
+            <input type="radio" name="price" id="300mil" value="2">
+            <label for="300mil">300 triệu - 1 tỷ</label><br>
+            <input type="radio" name="price" id="1bil" value="3">
+            <label for="1bil">1 tỷ - 5 tỷ</label><br>
+            <input type="radio" name="price" id="5bil" value="4">
+            <label for="5bil">5 tỷ - 30 tỷ</label><br>
+            </p>
+        </div>
+        <button type="submit" class="btn fw-bold">Lọc</button>
+    </aside>
+    <section class="text-start col-12 col-md-9">
+        <h4 class="">TẤT CẢ MẪU XE</h4>
+        {% include 'product_list.html' %}
+    </section>
+    {% include 'pagination.html' %}
+</div>
+</form>
